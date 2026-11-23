@@ -1,1 +1,79 @@
-
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNSfhNd81U9pz1kB1GlKhMU"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AfOOrheHy6fP",
+        "outputId": "d7436fe3-de00-4926-a1e8-4f6a61cb6b2b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Start Node: a\n",
+            "BFS Traversal: \n",
+            "A B C D E F G H "
+          ]
+        }
+      ],
+      "source": [
+        "from collections import deque\n",
+        "graph = {\n",
+        "    'A' : ['B','C'],\n",
+        "    'B' : ['D','E'],\n",
+        "    'C' : ['F'],\n",
+        "    'D' : ['G'],\n",
+        "    'E' : [],\n",
+        "    'F' : ['H'],\n",
+        "    'G' : [],\n",
+        "    'H' : []\n",
+        "}\n",
+        "\n",
+        "def bfs(graph,start):\n",
+        "\n",
+        "    visited  = []  #stores visited nodes\n",
+        "    queue = deque() #create an empty queue\n",
+        "\n",
+        "    visited.append(start) #visit the start node\n",
+        "    queue.append(start) #add start node to the queue\n",
+        "\n",
+        "    while queue:\n",
+        "\n",
+        "      node = queue.popleft() #remove first node=A\n",
+        "      print(node, end=\" \")\n",
+        "\n",
+        "      #visit all neighbours\n",
+        "      for neighbour in graph[node]:\n",
+        "        if neighbour not in visited:\n",
+        "          visited.append(neighbour)\n",
+        "          queue.append(neighbour)\n",
+        "\n",
+        "#user input\n",
+        "start = input(\"Enter Start Node: \").upper()\n",
+        "\n",
+        "print(\"BFS Traversal: \")\n",
+        "bfs(graph, start)"
+      ]
+    }
+  ]
+}
