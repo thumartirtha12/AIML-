@@ -1,0 +1,141 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNwtJ6YBgZsWubVwO2uds/8",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Tanishka-91/AIML-LAB-ASSIGNMENTS/blob/main/Assignment_4.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "WX1EoHAe2W39",
+        "outputId": "c32cb51b-6347-4836-c4ef-1339b9520eae",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Addition: 30\n",
+            "Subtraction: 10\n",
+            "Multiplication: 200\n",
+            "Division: 2.0\n",
+            "Power: 400\n",
+            "Square root: 4.47213595499958\n"
+          ]
+        }
+      ],
+      "source": [
+        "import statistics\n",
+        "import math\n",
+        "import numpy as np\n",
+        "\n",
+        "a = 20\n",
+        "b = 10\n",
+        "\n",
+        "print(\"Addition:\", a + b)\n",
+        "print(\"Subtraction:\", a - b)\n",
+        "print(\"Multiplication:\", a * b)\n",
+        "print (\"Division:\", a / b)\n",
+        "print(\"Power:\", a ** 2)\n",
+        "print (\"Square root:\", math.sqrt(a))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Statistical calculations\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "print (\"\\nDataset:\", data)\n",
+        "print(\"Mean:\", statistics.mean(data))\n",
+        "print (\"Median:\", statistics.median(data))\n",
+        "print(\"Population Standard Deviation:\",\n",
+        "      statistics.pstdev(data))\n",
+        "print (\"Variance:\", statistics.pvariance(data))\n",
+        "print(\"Minimum:\", min(data))\n",
+        "print (\"Maximum:\", max(data))"
+      ],
+      "metadata": {
+        "id": "OgRaw5D82eab",
+        "outputId": "df08afba-30d7-432b-d550-73530ab75241",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Dataset: [10, 20, 30, 40, 50]\n",
+            "Mean: 30\n",
+            "Median: 30\n",
+            "Population Standard Deviation: 14.142135623730951\n",
+            "Variance: 200\n",
+            "Minimum: 10\n",
+            "Maximum: 50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# NumPy calculations\n",
+        "arr = np.array(data)\n",
+        "\n",
+        "print(\"\\nNumPy Mean:\", np.mean(arr))\n",
+        "print(\"NumPy Median:\", np.median(arr))\n",
+        "print(\"NumPy Standard Deviation:\", np.std(arr))"
+      ],
+      "metadata": {
+        "id": "bHnU0g-12kxd",
+        "outputId": "a79ab566-2b2d-4397-bfc5-7918ee4d8ec2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "NumPy Mean: 30.0\n",
+            "NumPy Median: 30.0\n",
+            "NumPy Standard Deviation: 14.142135623730951\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
